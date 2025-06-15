@@ -1,94 +1,46 @@
-Telco Customer Churn Prediction
-This project focuses on analyzing customer churn behavior in a telecom company using machine learning. It includes data cleaning, exploratory data analysis (EDA), model building, evaluation, threshold tuning, and hyperparameter optimization.
+# Telco Customer Churn Analysis
 
-Problem Statement
-Customer churn is a critical problem in the telecom industry. This project aims to identify customers who are likely to discontinue the service using historical customer data. Predicting churn can help companies retain customers and reduce revenue loss.
+## Project Overview
+This project analyzes customer data from a telecom company to predict churn using various classification algorithms. 
+The objective is to develop a model that can identify customers who are likely to discontinue the service, allowing the company to take proactive retention actions.
 
-Dataset
-Source: Kaggle (Telco Customer Churn Dataset)
+## Goals
+- Understand key factors influencing customer churn
+- Build and compare machine learning models
+- Improve model recall to capture more potential churners
+- Deploy a practical model pipeline suitable for real-world use
 
-Records: ~7,000+
+## Dataset
+- Source: Kaggle – Telco Customer Churn
+- Records: 7,043 customer records with features like contract type, tenure, payment method, and churn status
 
-Target: Churn (Yes/No)
+## Workflow Summary
+1. Data Cleaning
+2. Exploratory Data Analysis (EDA)
+3. Data Preprocessing
+4. Model Building (Logistic Regression, Random Forest, SVM, etc.)
+5. Model Comparison
+6. Pipeline Creation (Logistic Regression with StandardScaler)
+7. Hyperparameter Tuning using GridSearchCV
+8. Threshold Tuning for better recall
+9. Model Evaluation and Conclusion
 
-Steps Covered
-Data Cleaning
+## Model Performance
+- Best performing model: Logistic Regression with hyperparameter tuning
+- F1 Score: 0.56
+- Recall: 0.51 (improved to 0.73 after threshold adjustment)
 
-Handled missing values
+## Tools and Technologies Used
+- Python
+- NumPy, Pandas
+- Scikit-learn
+- Matplotlib, Seaborn
+- Jupyter Notebook
 
-Corrected data types
+## Folder Structure
+- `telco_churn_analysis.ipynb`: Jupyter notebook with code, analysis, and results
+- `README.md`: Project overview and documentation
 
-Exploratory Data Analysis (EDA)
-
-Visualized customer churn trends
-
-Identified key churn drivers
-
-Feature Engineering
-
-Encoded categorical variables
-
-Scaled numerical features
-
-Data Preprocessing
-
-Train-test split
-
-Applied transformations for modeling
-
-Modeling (Multiple Models Tried)
-
-Logistic Regression
-
-Random Forest
-
-Support Vector Machine
-
-KNN
-
-Decision Tree
-
-Gradient Boosting
-
-Pipeline Integration
-
-Used sklearn.pipeline to combine steps
-
-Hyperparameter Tuning
-
-Applied GridSearchCV to improve model performance
-
-Threshold Tuning
-
-Adjusted threshold to increase Recall (important in churn)
-
-Best Model Performance (Logistic Regression)
-Metric	Score
-Accuracy	78.8%
-Precision	62.4%
-Recall	51.6%
-F1 Score	56.5%
-
-Key Learnings
-Pipeline makes model building and testing cleaner and scalable
-
-Threshold tuning helped tailor the model for real business goals
-
-Evaluating with multiple metrics (not just accuracy) gives a realistic view
-
-Future Improvements
-Try advanced models like XGBoost (if environment allows)
-
-Deploy as a simple web app using Flask or Streamlit
-
-Use SHAP or LIME for feature interpretation
-
-Files in this Repo
-File Name	Description
-telco_churn_analysis.ipynb	Full notebook with code + markdown
-README.md	Project overview (this file)
-model.pkl (optional)	Saved trained model using joblib
-
-Author
-Ramya B
-Passionate about data and solving business problems through ML.
+## Author
+Ramya Bhagavathi  
+GitHub: [RamyaBhagavathi](https://github.com/RamyaBhagavathi)
