@@ -90,5 +90,5 @@ README.md	Project overview (this file)
 model.pkl (optional)	Saved trained model using joblib
 
 Author
-Trisha Ramya B
+Ramya B
 Passionate about data and solving business problems through ML.
